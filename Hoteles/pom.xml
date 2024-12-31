@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.curso</groupId>
-	<artifactId>PruebaCuarta</artifactId>
+<artifactId>Hoteles</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>PruebaCuarta</name>
+	<name>Hoteles</name>
 	<description>Proyecto Final Juan Luis Guerra Gennich Master ViewNext Java</description>
 	<url/>
 	<licenses>

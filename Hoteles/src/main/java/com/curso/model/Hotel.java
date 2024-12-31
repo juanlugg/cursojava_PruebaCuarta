@@ -21,12 +21,9 @@ public class Hotel {
 	private Boolean disponible;
 
 	public Hotel() {
-		super();
 	}
 
-	public Hotel(int idHotel, String nombre, Double precio, Boolean disponible) {
-		super();
-		this.idHotel = idHotel;
+	public Hotel(String nombre, Double precio, Boolean disponible) {
 		this.nombre = nombre;
 		this.precio = precio;
 		this.disponible = disponible;
