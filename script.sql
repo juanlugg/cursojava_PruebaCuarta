@@ -51,3 +51,8 @@ CREATE TABLE `agencia_viajes`.`reservas` (
     REFERENCES `agencia_viajes`.`vuelos` (`id_vuelo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+
+INSERT INTO `agencia_viajes`.`reservas` (`nombre_cliente`, `dni`, `id_hotel`, `id_vuelo`) VALUES ('Juan Luis Guerra Gennich', '790590xxX', '1', '2');
+INSERT INTO `agencia_viajes`.`reservas` (`nombre_cliente`, `dni`, `id_hotel`, `id_vuelo`) VALUES ('Paco', '12345678Z', '4', '6');
+INSERT INTO `agencia_viajes`.`reservas` (`nombre_cliente`, `dni`, `id_hotel`, `id_vuelo`) VALUES ('Zoe', '22102022E', '2', '2');
+INSERT INTO `agencia_viajes`.`reservas` (`nombre_cliente`, `dni`, `id_hotel`, `id_vuelo`) VALUES ('Geronimo', '98765432A', '5', '1');
