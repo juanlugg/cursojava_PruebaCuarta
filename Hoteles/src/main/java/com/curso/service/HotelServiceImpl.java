@@ -8,6 +8,11 @@ import org.springframework.stereotype.Service;
 import com.curso.model.Hotel;
 import com.curso.repository.HotelRepository;
 
+/**
+ * Clase que será el servicio que gestione la funcionalidad de las consultas para hoteles
+ * @author Juan Luis Guerra Gennich 31/12/2024
+ * @version 1.0.0 
+ */
 @Service
 public class HotelServiceImpl implements IHotelService {
 	@Autowired
@@ -22,6 +27,4 @@ public class HotelServiceImpl implements IHotelService {
 	public Hotel findByName(String nombre) {
 		return repository.findByNombre(nombre);
 	}
-	
-
 }

@@ -9,6 +9,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+/**
+ * Clase que reprensará la entidad "hoteles" en la base de datos de "agencia_viajes"
+ * @author Juan Luis Guerra Gennich 31/12/2024
+ * @version 1.0.0 
+ */
 @Entity
 @Table(name = "hoteles")
 public class Hotel {

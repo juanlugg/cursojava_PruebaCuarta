@@ -17,7 +17,7 @@ INSERT INTO `agencia_viajes`.`hoteles` (`nombre`, `precio`, `disponible`) VALUES
 
 
 CREATE TABLE `agencia_viajes`.`vuelos` (
-  `id_vuelos` INT NOT NULL AUTO_INCREMENT,
+  `id_vuelo` INT NOT NULL AUTO_INCREMENT,
   `company` VARCHAR(50) NULL,
   `fecha_vuelo` VARCHAR(10) NULL,
   `precio` DECIMAL(6,2) NULL,
@@ -30,3 +30,24 @@ INSERT INTO `agencia_viajes`.`vuelos` (`company`, `fecha_vuelo`, `precio`, `plaz
 INSERT INTO `agencia_viajes`.`vuelos` (`company`, `fecha_vuelo`, `precio`, `plazas`) VALUES ('Iberia', '13/04/2025', '223', '54');
 INSERT INTO `agencia_viajes`.`vuelos` (`company`, `fecha_vuelo`, `precio`, `plazas`) VALUES ('Air Europa', '21/11/2023', '150', '22');
 INSERT INTO `agencia_viajes`.`vuelos` (`company`, `fecha_vuelo`, `precio`, `plazas`) VALUES ('Lufthansa', '30/01/2024', '76.50', '0');
+
+CREATE TABLE `agencia_viajes`.`reservas` (
+  `id_reserva` INT NOT NULL AUTO_INCREMENT,
+  `nombre_cliente` VARCHAR(100) NULL,
+  `dni` VARCHAR(9) NOT NULL,
+  `id_hotel` INT NOT NULL,
+  `id_vuelo` INT NOT NULL,
+  PRIMARY KEY (`id_reserva`),
+  UNIQUE INDEX `dni_UNIQUE` (`dni` ASC) VISIBLE,
+  INDEX `id_hotel_idx` (`id_hotel` ASC) VISIBLE,
+  INDEX `id_vuelo_idx` (`id_vuelo` ASC) VISIBLE,
+  CONSTRAINT `id_hotel`
+    FOREIGN KEY (`id_hotel`)
+    REFERENCES `agencia_viajes`.`hoteles` (`id_hotel`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `id_vuelo`
+    FOREIGN KEY (`id_vuelo`)
+    REFERENCES `agencia_viajes`.`vuelos` (`id_vuelo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
