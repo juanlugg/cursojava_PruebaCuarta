@@ -48,7 +48,6 @@ public class ReservaServiceImpl implements IReservaService {
 			return r;
 		} else
 			return null;
-
 	}
 
 	@Override
@@ -56,7 +55,7 @@ public class ReservaServiceImpl implements IReservaService {
 		List<Reserva> lista = new ArrayList<Reserva>();
 		Map<?, ?> h = template.getForObject(URL_HOTELES + hotel, Map.class);
 		for (Reserva reserva : repository.findAll()) {
-			if (reserva.getIdHotel() == (int)h.get("idHotel")) {
+			if (reserva.getIdHotel() == (int) h.get("idHotel")) {
 				lista.add(reserva);
 			}
 		}
