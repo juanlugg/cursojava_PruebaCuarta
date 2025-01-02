@@ -26,13 +26,14 @@ public class VueloController {
 	@Autowired
 	IVueloService service;
 
+	
 	@GetMapping(value = "/{plazas}")
 	public ResponseEntity<List<Vuelo>> findListPlazas(@PathVariable int plazas) {
 		return ResponseEntity.ok(service.findListPlazas(plazas));
 	}
 
 	@PutMapping(value = "/{id}/{plazas}")
-	public ResponseEntity<Vuelo> updateVuelo(@PathVariable int id, @PathVariable int plazas) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(service.updateVuelo(id, plazas));
-	}
+	public ResponseEntity<Boolean> updateVuelo(@PathVariable int id, @PathVariable int plazas) {
+		boolean actualizado = service.updatePlazas(id, plazas);
+		return ResponseEntity.status(actualizado ? HttpStatus.CREATED : HttpStatus.BAD_REQUEST).body(actualizado);	}
 }

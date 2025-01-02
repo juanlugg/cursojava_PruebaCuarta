@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
- * Clase inicial de ejecución y enlace del proyecto para vuelos
+ * Clase inicial de ejecución y configuración del proyecto para vuelos
  * @author Juan Luis Guerra Gennich 31/12/2024
  * @version 1.0.0 
  */

@@ -11,5 +11,5 @@ import com.curso.model.Vuelo;
  */
 public interface IVueloService {
 	List<Vuelo> findListPlazas(int plazas);
-	Vuelo updateVuelo(int id, int plazas);
+	Boolean updatePlazas(int id, int plazas);
 }

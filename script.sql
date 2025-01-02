@@ -22,7 +22,7 @@ CREATE TABLE `agencia_viajes`.`vuelos` (
   `fecha_vuelo` VARCHAR(10) NULL,
   `precio` DECIMAL(6,2) NULL,
   `plazas` INT NULL,
-  PRIMARY KEY (`id_vuelos`));
+  PRIMARY KEY (`id_vuelo`));
 
 INSERT INTO `agencia_viajes`.`vuelos` (`company`, `fecha_vuelo`, `precio`, `plazas`) VALUES ('Raynair', '22/10/2022', '56', '104');
 INSERT INTO `agencia_viajes`.`vuelos` (`company`, `fecha_vuelo`, `precio`, `plazas`) VALUES ('Turkish Airlines', '12/01/2025', '849.50', '34');

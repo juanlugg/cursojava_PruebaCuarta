@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * Clase inicial de ejecución y enlace del proyecto para reservas
+ * Clase inicial de ejecución y configuración del proyecto para reservas
  * 
  * @author Juan Luis Guerra Gennich 31/12/2024
  * @version 1.0.0
