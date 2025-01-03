@@ -16,10 +16,10 @@ import org.springframework.web.client.RestTemplate;
 @EntityScan(basePackages = "com.curso.model")
 @EnableJpaRepositories(basePackages = "com.curso.repository")
 @SpringBootApplication(scanBasePackages = { "com.curso.service", "com.curso.controller" })
-public class ReservasApplication {
+public class ReservaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ReservasApplication.class, args);
+		SpringApplication.run(ReservaApplication.class, args);
 	}
 
 	@Bean

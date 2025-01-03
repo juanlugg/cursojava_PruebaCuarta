@@ -10,12 +10,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 /**
- * Clase que reprensará la entidad "vuelos" en la base de datos de "agencia_viajes"
+ * Clase que reprensará la entidad "vuelos" en la base de datos de
+ * "agencia_viajes"
+ * 
  * @author Juan Luis Guerra Gennich 31/12/2024
- * @version 1.0.0 
+ * @version 1.0.0
  */
 @Entity
-@Table(name="vuelos")
+@Table(name = "vuelos")
 public class Vuelo {
 	@Id
 	@Column(name = "id_vuelo")

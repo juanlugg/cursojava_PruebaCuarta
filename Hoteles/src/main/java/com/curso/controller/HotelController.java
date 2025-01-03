@@ -20,7 +20,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
  * Clase POJO que define los métodos para las peticiones de hoteles
  * 
  * @author Juan Luis Guerra Gennich 31/12/2024
- * @version 1.0.0
+ * @version 1.1.0
  */
 @Tag(name = "Hoteles", description = "La API de hoteles")
 @RestController
@@ -34,7 +34,6 @@ public class HotelController {
 	@ApiResponse(responseCode = "404", description = "No se ha encontrado ningún hotel con ese nombre")
 	@GetMapping(value = "/{nombre}")
 	public ResponseEntity<Hotel> findHotel(@PathVariable String nombre) {
-		// return service.findByName(nombre);
 		return ResponseEntity.ok(service.findByName(nombre));
 	}
 	
